@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".main.MainActivity">
+
+    <!--    Membuat Custom App Bar      -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:elevation="0dp"
+        app:elevation="0dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="182dp"
+                android:layout_height="match_parent"
+                android:contentDescription="logo"
+                android:src="@drawable/img_title_3x" />
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <TextView
+            android:id="@+id/tvMainInput"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="28dp"
+            android:autoSizeMaxTextSize="48sp"
+            android:autoSizeMinTextSize="12sp"
+            android:autoSizeStepGranularity="2sp"
+            android:autoSizeTextType="uniform"
+            android:gravity="bottom|end"
+            android:scrollbars="vertical"
+            android:textColor="@color/colorBlack"
+            android:textSize="48sp"
+            android:textStyle="bold"
+            tools:text="10 + 2" />
+
+        <TextView
+            android:id="@+id/tvMainResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:autoSizeMaxTextSize="18sp"
+            android:autoSizeMinTextSize="12sp"
+            android:autoSizeStepGranularity="2sp"
+            android:autoSizeTextType="uniform"
+            android:lines="1"
+            android:textAlignment="textEnd"
+            android:textColor="@color/colorGray"
+            android:textSize="18sp"
+            android:textStyle="normal"
+            tools:text="= 12" />
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="16dp"
+            android:alignmentMode="alignBounds"
+            android:columnCount="4"
+            android:rowCount="5"
+            android:useDefaultMargins="false">
+
+
+            <!--            Row 1           -->
+            <Button
+                android:id="@+id/btnMainClear"
+                style="@style/gridBtnText"
+                android:onClick="onClick"
+                android:text="AC" />
+
+            <Button
+                android:id="@+id/btnMainDelete"
+                style="@style/gridBtnText"
+                android:onClick="onClick"
+                android:text="Del" />
+
+            <Button
+                android:id="@+id/btnMainDivide"
+                style="@style/gridBtnText"
+                android:onClick="onClick"
+                android:text="÷" />
+
+            <Button
+                android:id="@+id/btnMainMultiple"
+                style="@style/gridBtnText"
+                android:onClick="onClick"
+                android:text="×" />
+
+            <!--            Row 2           -->
+            <Button
+                android:id="@+id/btnMainNum7"
+                style="@style/gridBtnText"
+                android:onClick="onClick"
+                android:text="7" />
+
+            <Button
+                android:id="@+id/btnMainNum8"
+                style="@style/gridBtnText"
+                android:onClick="onClick"
+                android:text="8" />
+
+            <Button
+                android:id="@+id/btnMainNum9"
+                style="@style/gridBtnText"
+                android:onClick="onClick"
+                android:text="9" />
+
+            <Button
+                android:id="@+id/btnMainMinus"
+                style="@style/gridBtnText"
+                android:onClick="onClick"
+                android:text="-" />
+
+            <!--            Row 3           -->
+            <Button
+                android:id="@+id/btnMainNum4"
+                style="@style/gridBtnText"
+                android:onClick="onClick"
+                android:text="4" />
+
+            <Button
+                android:id="@+id/btnMainNum5"
+                style="@style/gridBtnText"
+                android:onClick="onClick"
+                android:text="5" />
+
+            <Button
+                android:id="@+id/btnMainNum6"
+                style="@style/gridBtnText"
+                android:onClick="onClick"
+                android:text="6" />
+
+            <Button
+                android:id="@+id/btnMainPlus"
+                style="@style/gridBtnText"
+                android:onClick="onClick"
+                android:text="+" />
+
+            <!--            Row 4           -->
+            <Button
+                android:id="@+id/btnMainNum1"
+                style="@style/gridBtnText"
+                android:onClick="onClick"
+                android:text="1" />
+
+            <Button
+                android:id="@+id/btnMainNum2"
+                style="@style/gridBtnText"
+                android:onClick="onClick"
+                android:text="2" />
+
+            <Button
+                android:id="@+id/btnMainNum3"
+                style="@style/gridBtnText"
+                android:onClick="onClick"
+                android:text="3" />
+
+            <Button
+                android:id="@+id/btnMainEqual"
+                style="@style/gridBtnText"
+                android:layout_rowSpan="2"
+                android:onClick="onClick"
+                android:text="=" />
+
+            <!--            Row 5           -->
+            <Button
+                android:id="@+id/btnMainNum0"
+                style="@style/gridBtnText"
+                android:layout_columnSpan="2"
+                android:onClick="onClick"
+                android:text="0" />
+
+            <Button
+                android:id="@+id/btnMainPoint"
+                style="@style/gridBtnText"
+                android:onClick="onClick"
+                android:text="." />
+
+        </GridLayout>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
